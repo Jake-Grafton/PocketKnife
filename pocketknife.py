@@ -28,11 +28,11 @@ def scan1():
         req = requests.get(scan)
         code = req.status_code
         if code == 200:
-            print("[+] " + scan, end='')
+            print("\033[1;32;40m[+] " + scan, end='')
         elif code == 404:
-            print("[-] " + scan, end='')
+            print("\033[1;31;40m[-] " + scan, end='')
         else:
-            print("[?] " + scan, end='')
+            print("\033[1;33;40m[?] " + scan, end='')
 
 def scan2():
     for extension in wordlist2:
@@ -40,11 +40,11 @@ def scan2():
         req = requests.get(scan)
         code = req.status_code
         if code == 200:
-            print("[+] " + scan, end='')
+            print("\033[1;32;40m[+] " + scan, end='')
         elif code == 404:
-            print("[-] " + scan, end='')
+            print("\033[1;31;40m[-] " + scan, end='')
         else:
-            print("[?] " + scan, end='')
+            print("\033[1;33;40m[?] " + scan, end='')
 
 def scan3():
     for extension in wordlist3:
@@ -52,11 +52,11 @@ def scan3():
         req = requests.get(scan)
         code = req.status_code
         if code == 200:
-            print("[+] " + scan, end='')
+            print("\033[1;32;40m[+] " + scan, end='')
         elif code == 404:
-            print("[-] " + scan, end='')
+            print("\033[1;31;40m[-] " + scan, end='')
         else:
-            print("[?] " + scan, end='')
+            print("\033[1;33;40m[?] " + scan, end='')
 
 def scan4():
     for extension in wordlist4:
@@ -64,11 +64,11 @@ def scan4():
         req = requests.get(scan)
         code = req.status_code
         if code == 200:
-            print("[+] " + scan, end='')
+            print("\033[1;32;40m[+] " + scan, end='')
         elif code == 404:
-            print("[-] " + scan, end='')
+            print("\033[1;31;40m[-] " + scan, end='')
         else:
-            print("[?] " + scan, end='')
+            print("\033[1;33;40m[?] " + scan, end='')
 
 # Scans set up for multithreading.
 
@@ -89,3 +89,4 @@ t2.join()
 t3.join()
 t4.join()
 # Wait until all threads finish.
+print("\033[0;37;40m", end='')
